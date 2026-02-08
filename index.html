@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indian Food Court</title>
+
+<style>
+body{
+  font-family:Segoe UI,sans-serif;
+  margin:0;
+  background:linear-gradient(to right,#fff3e0,#ffe0b2);
+}
+header{
+  background:#8b0000;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+nav{
+  background:#f4e10a;
+  padding:10px;
+  text-align:center;
+}
+nav a{
+  margin:0 15px;
+  text-decoration:none;
+  font-weight:bold;
+  color:#8b0000;
+}
+section{ padding:20px; }
+h2{ color:#8b0000; }
+
+.dish{
+  background:white;
+  display:flex;
+  gap:15px;
+  margin:15px 0;
+  padding:15px;
+  border-radius:8px;
+  box-shadow:0 2px 5px rgba(0,0,0,0.2);
+}
+.dish img{
+  width:100px;
+  height:100px;
+  border-radius:8px;
+  object-fit:cover;
+}
+.price{ color:#006400; font-weight:bold; }
+
+.cart-btn{
+  background:#8b0000;
+  color:white;
+  border:none;
+  padding:8px 15px;
+  border-radius:5px;
+  cursor:pointer;
+}
+.cart-btn:hover{ background:#006400; }
+
+#cart{
+  background:#fafafa;
+  border:2px solid #8b0000;
+  border-radius:8px;
+  margin:20px;
+  padding:20px;
+}
+
+footer{
+  background:#8b0000;
+  color:white;
+  text-align:center;
+  padding:15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🍴 Suvaipoma </h1>
+<p>Authentic Indian Flavours</p>
+</header>
+
+<nav>
+<a href="#chaat">Chaat</a>
+<a href="#main">Main Course</a>
+<a href="#dessert">Desserts</a>
+<a href="#drinks">Drinks</a>
+<a href="#cart">🛒 Cart</a>
+</nav>
+
+<!-- CHAAT -->
+<section id="chaat">
+<h2>Chaat</h2>
+
+<<div class="dish">
+  <img src="panipoori.jpeg" alt="Pani Puri">
+  <div>
+    <h3>Pani Puri <span class="price">₹30</span></h3>
+    <button class="cart-btn" onclick="addToCart('Bhel Puri',30)">Buy</button>
+  </div>
+</div>
+
+
+<div class="dish">
+  <img src="Quick & Easy Bhelpuri Recipe for Instant Snack Cravings.jpeg" alt="Bhel Puri">
+  <div>
+    <h3>Bhel Puri <span class="price">₹30</span></h3>
+    <button class="cart-btn" onclick="addToCart('Bhel Puri',30)">Buy</button>
+  </div>
+</div>
+
+<div class="dish">
+<img src="Aloo Tikki Recipe.jpeg">
+<div>
+<h3>Aloo Chaat <span class="price">₹50</span></h3>
+<button class="cart-btn" onclick="addToCart('Aloo Chaat',50)">Buy</button>
+</div>
+</div>
+
+<div class="dish">
+<img src="Pav Bhaji Food.jpeg">
+<div>
+<h3>Pav Bhaji <span class="price">₹70</span></h3>
+<button class="cart-btn" onclick="addToCart('Pav Bhaji',70)">Buy</button>
+</div>
+</div>
+</section>
+
+<!-- MAIN COURSE -->
+<section id="main">
+<h2>Main Course</h2>
+
+<div class="dish">
+<img src="The Best Paneer Butter Masala Recipe_ Irresistibly Creamy Delight.jpeg">
+<div>
+<h3>Paneer Butter Masala <span class="price">₹150</span></h3>
+<button class="cart-btn" onclick="addToCart('Paneer Butter Masala',150)">Buy</button>
+</div>
+</div>
+
+<div class="dish">
+<img src="Chicken Dum Biryani - Coolinarco_com.jpeg">
+<div>
+<h3>Chicken Biryani <span class="price">₹180</span></h3>
+<button class="cart-btn" onclick="addToCart('Chicken Biryani',180)">Buy</button>
+</div>
+</div>
+
+<div class="dish">
+<img src="Chinese Scallion Oil Noodles.jpeg">
+<div>
+<h3>Chicken Noodles <span class="price">₹140</span></h3>
+<button class="cart-btn" onclick="addToCart('Chicken Noodles',140)">Buy</button>
+</div>
+</div>
+
+<div class="dish">
+<img src="Onam Sadhya _ Onam Sadya Recipes (4).jpeg">
+<div>
+<h3>Veg Meals <span class="price">₹120</span></h3>
+<button class="cart-btn" onclick="addToCart('Veg Meals',120)">Buy</button>
+</div>
+</div>
+</section>
+
+<!-- DESSERTS -->
+<section id="dessert">
+<h2>Desserts</h2>
+
+<div class="dish">
+<img src="Gulab jamun  is a  treditional indian Asin  dessert made from  deep  fiend  daugh balls  of  khoya__.jpeg">
+<div>
+<h3>Gulab Jamun <span class="price">₹60</span></h3>
+<button class="cart-btn" onclick="addToCart('Gulab Jamun',60)">Buy</button>
+</div>
+</div>
+
+<div class="dish">
+<img src="Kesar Pista Kulfi Recipe_ How to Make Kesar Pista Kulfi Recipe _ Homemade Kesar Pista Kulfi Recipe.jpeg">
+<div>
+<h3>Kulfi <span class="price">₹80</span></h3>
+<button class="cart-btn" onclick="addToCart('Kulfi',80)">Buy</button>
+</div>
+</div>
+
+<div class="dish">
+<img src="Rasmalai Recipe - Instacart.jpeg">
+<div>
+<h3>Rasmalai <span class="price">₹90</span></h3>
+<button class="cart-btn" onclick="addToCart('Rasmalai',90)">Buy</button>
+</div>
+</div>
+
+<div class="dish">
+<img src="Icecream Faluda with strawberries_____.jpeg">
+<div>
+<h3>Falooda <span class="price">₹100</span></h3>
+<button class="cart-btn" onclick="addToCart('Falooda',100)">Buy</button>
+</div>
+</div>
+</section>
+
+<!-- DRINKS -->
+<section id="drinks">
+<h2>Drinks</h2>
+
+<div class="dish">
+<img src="Rose Milk Tea Latte - Moon Milk - Flax and Sugar - Mikyla Meckelson.jpeg">
+<div>
+<h3>Rose Milk <span class="price">₹40</span></h3>
+<button class="cart-btn" onclick="addToCart('Rose Milk',40)">Buy</button>
+</div>
+</div>
+
+<div class="dish">
+<img src="download.jpeg">
+<div>
+<h3>Badam Milk <span class="price">₹60</span></h3>
+<button class="cart-btn" onclick="addToCart('Badam Milk',60)">Buy</button>
+</div>
+</div>
+
+<div class="dish">
+<img src="download (1).jpeg">
+<div>
+<h3>Fresh Lime Soda <span class="price">₹35</span></h3>
+<button class="cart-btn" onclick="addToCart('Fresh Lime Soda',35)">Buy</button>
+</div>
+</div>
+</section>
+
+<!-- CART -->
+<section id="cart">
+<h2>🛒 Cart</h2>
+<ul id="cartItems"></ul>
+<h3>Total: ₹<span id="total">0</span></h3>
+</section>
+
+<footer>
+<p>© 2026 Suvaipoma </p>
+</footer>
+
+<script>
+let total=0;
+function addToCart(item,price){
+  let li=document.createElement("li");
+  li.textContent=item+" - ₹"+price;
+  document.getElementById("cartItems").appendChild(li);
+  total+=price;
+  document.getElementById("total").innerText=total;
+}
+</script>
+
+</body>
+</html>
